@@ -7,7 +7,7 @@ export default function SearchBar() {
             <input 
                 className='searchbar--search' 
                 type="text" 
-                placeholder="Search" 
+                placeholder="Filter...🥇🥈🥉" 
             />
         </nav>
     );

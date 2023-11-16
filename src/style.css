@@ -26,18 +26,18 @@ header {
 }
 
 .header--img {
-   max-width: 50px;
+    max-width: 50px;
 }
 
 .header--descr {
-    margin-left: auto;
+    text-align: right;
     font-size: 14px;
     font-weight: 500;
 }
 
 .searchbar--container {
-    width: 100%; 
-    text-align: center; 
+    width: 100%;
+    text-align: center;
 }
 
 .searchbar--search {
@@ -46,5 +46,5 @@ header {
     border: none;
     border-radius: 5px;
     text-indent: 5px;
-    margin: 70px auto 0; 
+    margin: 70px auto 0;
 }
