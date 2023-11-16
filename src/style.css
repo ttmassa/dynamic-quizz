@@ -48,3 +48,10 @@ header {
     text-indent: 5px;
     margin: 70px auto 0;
 }
+
+.quiz-questions {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: rgb(3, 3, 88);
+}
