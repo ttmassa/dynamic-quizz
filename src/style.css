@@ -1,5 +1,5 @@
 :root {
-    --width: 500px;
+    --width: 700px;
 }
 
 * {
@@ -89,4 +89,9 @@ header {
 
 .question--level:hover {
     cursor: pointer;
+}
+
+.question--answer {
+    font-size: 20px;
+    margin-top: 20px;
 }
