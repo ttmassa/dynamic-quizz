@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
-
+import React,{useState} from 'react'
 
 export default function Question(props) {
-    const [showAnswer, setShowAnswer] = useState(false);
+    // Mettre à jour la visibilité de la réponse 
+    const [isAnswerVisible, setIsAnswerVisible] = useState(false);
 
-    const handleLevelClick = () => {
-        setShowAnswer(!showAnswer);
-    };
+    // Fonction appelé chaque fois que l'utilisateur clique sur une médaille pour modifier la visibilité de la réponse
+    function handleClick() {
+        setIsAnswerVisible(!isAnswerVisible);
+    }
+
 
     return (
         <section className='question'>
@@ -14,10 +16,10 @@ export default function Question(props) {
                 src={props.level}
                 alt="question's difficulty"
                 className='question--level'
-                onClick={handleLevelClick}
+                onClick={handleClick}
             />
             <h2>{props.question}</h2>
-            {showAnswer && <p className='question--answer'>{props.answer}</p>}
+            {isAnswerVisible && <p className='question--answer'> {props.answer} </p>}
         </section>
     );
 }
