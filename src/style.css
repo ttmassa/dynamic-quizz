@@ -65,6 +65,7 @@ header {
 }
 
 .question {
+    border: 1px solid red;
     background-color: white;
     padding: 20px;
     border-radius: 5px;
@@ -84,4 +85,8 @@ header {
     border-radius: 50%;
     background-color: white;
 
+}
+
+.question--level:hover {
+    cursor: pointer;
 }

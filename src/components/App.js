@@ -6,14 +6,9 @@ import SearchBar from './SearchBar'
 import Question from './Question'
 
 export default function App() {
-    const quizQuestions = data.map((item) => {
-        return (
-            <Question 
-                key={item.id}
-                {...item}
-            />
-        )
-    }) 
+
+
+    const quizQuestions = data.map((item) => <Question  key = {item.id} {...item}/>)
 
     return (
         <div className='app--container'>
