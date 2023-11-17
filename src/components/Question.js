@@ -12,12 +12,11 @@ export default function Question(props) {
 
     return (
         <section className='question'>
-            <img
-                src={props.level}
+            <p
                 alt="question's difficulty"
                 className='question--level'
                 onClick={handleClick}
-            />
+            >{props.level}</p>
             <h2>{props.question}</h2>
             {isAnswerVisible && <p className='question--answer'> {props.answer} </p>}
         </section>

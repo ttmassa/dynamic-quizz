@@ -15,7 +15,7 @@ export default function App() {
         setSearchValue(value);
 
         // Filtrer les données en fonction de la nouvelle valeur de recherche
-        const newFilteredData = data.filter((item) => item.question.toLocaleLowerCase().includes(value));
+        const newFilteredData = data.filter((item) => (item.question.toLocaleLowerCase().includes(value)) || (item.level === value));
         setFilteredData(newFilteredData);
     };
 
