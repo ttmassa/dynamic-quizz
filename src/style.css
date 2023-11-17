@@ -1,3 +1,7 @@
+:root {
+    --width: 500px;
+}
+
 * {
     width: 100%;
     margin: 0;
@@ -41,7 +45,7 @@ header {
 }
 
 .searchbar--search {
-    width: 450px;
+    width: var(--width);
     height: 40px;
     border: none;
     border-radius: 5px;
@@ -50,8 +54,34 @@ header {
 }
 
 .quiz-questions {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    align-items: center;
     color: rgb(3, 3, 88);
+    gap: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.question {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    width: var(--width);
+    position: relative;
+}
+
+.question--level {
+    position: absolute;
+    top: -10px;
+    left: -10px;    
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+
 }
