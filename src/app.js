@@ -69,15 +69,20 @@ questionsData.forEach(question => {
 
     const questionAnswer = document.createElement('p');
     questionAnswer.classList.add('question--answer');
+    questionAnswer.classList.add('hidden');
     questionAnswer.textContent = question.answer;
     questionContainer.appendChild(questionAnswer);
 
     questions.appendChild(questionContainer);
 });
 
-
-
 main.appendChild(header);
 main.appendChild(nav);
 main.appendChild(questions);
 root.appendChild(main);
+
+// Gère la visibilité des réponses
+const questionsContainer = document.querySelectorAll('.question');
+questionsContainer.forEach((question) => {
+    question.addEventListener('click', () => question.querySelector('.question--answer').classList.toggle('hidden'));    
+})
