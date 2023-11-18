@@ -76,13 +76,52 @@ questionsData.forEach(question => {
     questions.appendChild(questionContainer);
 });
 
+// Append à main
 main.appendChild(header);
 main.appendChild(nav);
 main.appendChild(questions);
+
+// Append à root
 root.appendChild(main);
 
 // Gère la visibilité des réponses
 const questionsContainer = document.querySelectorAll('.question');
 questionsContainer.forEach((question) => {
     question.addEventListener('click', () => question.querySelector('.question--answer').classList.toggle('hidden'));    
-})
+});
+
+// Récupère la valeur de la searchbar
+const getSearchBarValue = () => searchbar.value.toLowerCase();
+
+// Affiche les questions filtrées
+const displayFilteredQuestions = () => {
+
+    // Filtre les questions en fonction de la valeur de la searchbar
+    const filteredQuestions = questionsData.filter(question => (question.question.toLowerCase().includes(getSearchBarValue())) || (question.level.toLowerCase() === getSearchBarValue()));
+
+    // Affiche les questions filtrées
+    questions.innerHTML = '';
+    filteredQuestions.forEach(question => {
+        const questionContainer = document.createElement('section');
+        questionContainer.classList.add('question');
+
+        const questionLevel = document.createElement('p');
+        questionLevel.classList.add('question--level');
+        questionLevel.textContent = question.level;
+        questionContainer.appendChild(questionLevel);
+
+        const questionTitle = document.createElement('h2');
+        questionTitle.textContent = question.question;
+        questionContainer.appendChild(questionTitle);
+
+        const questionAnswer = document.createElement('p');
+        questionAnswer.classList.add('question--answer');
+        questionAnswer.classList.add('hidden');
+        questionAnswer.textContent = question.answer;
+        questionContainer.appendChild(questionAnswer);
+
+        questions.appendChild(questionContainer);
+    });
+}
+
+searchbar.addEventListener('input', displayFilteredQuestions);
