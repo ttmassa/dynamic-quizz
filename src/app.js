@@ -85,10 +85,13 @@ main.appendChild(questions);
 root.appendChild(main);
 
 // Gère la visibilité des réponses
-const questionsContainer = document.querySelectorAll('.question');
-questionsContainer.forEach((question) => {
-    question.addEventListener('click', () => question.querySelector('.question--answer').classList.toggle('hidden'));    
+questions.addEventListener('click', (event) => {
+    const clickedQuestion = event.target.closest('.question');
+    if (clickedQuestion) {
+        clickedQuestion.querySelector('.question--answer').classList.toggle('hidden');
+    }
 });
+
 
 // Récupère la valeur de la searchbar
 const getSearchBarValue = () => searchbar.value.toLowerCase();
