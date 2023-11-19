@@ -24,7 +24,7 @@ const header = document.createElement('header');
 
 const logo = document.createElement('img');
 logo.classList.add('header--img');
-logo.src = 'https://w7.pngwing.com/pngs/471/813/png-transparent-quiz-exam-icon-button-test-examination-logo-education-college-knowledge.png';
+logo.src = '../assets/logo-quiz.png'
 logo.alt = 'Logo Quiz';
 header.appendChild(logo);
 
@@ -127,4 +127,5 @@ const displayFilteredQuestions = () => {
     });
 }
 
+// Obligé de mettre notre eventListener ici sinon problème de scope
 searchbar.addEventListener('input', displayFilteredQuestions);
