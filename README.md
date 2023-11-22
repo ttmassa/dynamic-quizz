@@ -1,6 +1,6 @@
 # Access
 
-Vous pouvez accéder au site(https://delightful-tulumba-192398.netlify.app) avec ce [lien](https://delightful-tulumba-192398.netlify.app): https://delightful-tulumba-192398.netlify.app()https://delightful-tulumba-192398.netlify.app. Le site à été déployé avec Netlify. 
+Vous pouvez accéder au [site](https://delightful-tulumba-192398.netlify.app) avec ce [lien](https://delightful-tulumba-192398.netlify.app): https://delightful-tulumba-192398.netlify.app()https://delightful-tulumba-192398.netlify.app. Le site à été déployé avec Netlify. 
 La branche main a été faite en utilisant React.js (que j'ai appris cet été) et la dom-version avec un fichier JS basique.
 Have fun!
 
